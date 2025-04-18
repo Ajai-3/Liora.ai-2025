@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  font-family: Outfit;
+}
+body {
+  @apply bg-black text-white
+}
+/* body {
+  @apply text-white;
+
+  background-image: 
+    linear-gradient(to right, #1e3a8a, #a855f7, #dc2626),
+    linear-gradient(to bottom, #0d0f14, #000000);         
+
+  background-size: 100% 300px, 100% 100%;
+  background-repeat: no-repeat;
+  background-position: top, top;
+  background-attachment: fixed;
+  overflow-x: hidden;
+} */
+
+
