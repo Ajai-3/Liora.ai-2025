@@ -58,7 +58,10 @@ const Navbar = () => {
   <FontAwesomeIcon icon={faCoins} size="1x" />
 </div>
 
-          <button className="px-6 py-1 outline outline-2 outline-white rounded-full hover:bg-gradient-to-r from-blue-700 via-purple-700 to-red-700">
+          <button
+            onClick={() => navigate("/login")}
+            className="px-6 py-1 outline outline-2 outline-white rounded-full hover:bg-gradient-to-r from-blue-700 via-purple-700 to-red-700 transition-all duration-300"
+          >
             Login
           </button>
         </div>

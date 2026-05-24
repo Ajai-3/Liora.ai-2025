@@ -1,9 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import useAOS from "../hooks/aosSetup"
 import images from "../assets/images";
 
 const Header = () => {
     useAOS();
+    const navigate = useNavigate();
     const image = "h-32 w-32 transition-all duration-700 hover:scale-105 cursor-pointer rounded-lg"
   return (
     <div className="flex flex-col relative justify-center sm:pt-32">
@@ -22,7 +24,10 @@ const Header = () => {
           tools, designed to help you turn your ideas into reality effortlessly.
         </p>
 
-        <button className="text-xl sm:text-2xl bg-black py-1 px-6 rounded-full transition-all duration-700 hover:scale-105">
+        <button
+          onClick={() => navigate("/result")}
+          className="text-xl sm:text-2xl bg-black py-1 px-6 rounded-full transition-all duration-700 hover:scale-105"
+        >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-red-500">
             Genarate image{" "}
           </span>
