@@ -12,7 +12,6 @@ const Results = () => {
     setLoading(true);
     setImage(null);
 
-    // Mock delay — replace with real API call
     setTimeout(() => {
       setImage("https://picsum.photos/seed/" + Date.now() + "/600/600");
       setLoading(false);
@@ -21,12 +20,10 @@ const Results = () => {
 
   return (
     <div className="min-h-screen relative px-4 sm:px-10 md:px-14 lg:px-28 pt-28 pb-20">
-      {/* Background gradient */}
       <div
         className="absolute top-0 left-0 right-0 h-[800px] bg-gradient-to-r from-blue-900 via-purple-500 to-red-600 z-0"
         style={{ maskImage: "linear-gradient(to bottom, black 50%, transparent 85%)" }}
       >
-        {/* Left dot pattern */}
         <div
           className="absolute top-0 left-0 h-full w-[30%]"
           style={{
@@ -35,7 +32,6 @@ const Results = () => {
             maskImage: "linear-gradient(to right, white 0%, transparent 100%)",
           }}
         />
-        {/* Right dot pattern */}
         <div
           className="absolute top-0 right-0 h-full w-[30%]"
           style={{
@@ -46,12 +42,9 @@ const Results = () => {
         />
       </div>
 
-      {/* Fade to black */}
       <div className="absolute top-[210px] left-0 right-0 bottom-0 bg-gradient-to-b from-transparent to-black z-10" />
 
-      {/* Content */}
       <div className="relative z-20 text-white max-w-6xl mx-auto">
-        {/* Heading */}
         <div className="text-center mb-10">
           <p className="py-1 px-3 mb-4 backdrop-blur-sm bg-white/10 rounded-full w-fit mx-auto text-sm">
             AI Image Generator ✨
@@ -67,10 +60,7 @@ const Results = () => {
           </p>
         </div>
 
-        {/* Side by side layout */}
         <div className="flex flex-col lg:flex-row gap-6 items-stretch">
-
-          {/* Left — Prompt + Button */}
           <div className="flex flex-col gap-5 flex-1">
             <div className="flex flex-col gap-2">
               <label className="text-sm text-gray-300">Your prompt</label>
@@ -102,7 +92,6 @@ const Results = () => {
             </button>
           </div>
 
-          {/* Right — Result */}
           <div className="flex flex-col gap-3 flex-1">
             <label className="text-sm text-gray-300">Result</label>
             <div className="w-full aspect-square rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center overflow-hidden">
@@ -127,7 +116,6 @@ const Results = () => {
               )}
             </div>
 
-            {/* Download button */}
             {image && !loading && (
               <a
                 href={image}
@@ -141,7 +129,6 @@ const Results = () => {
               </a>
             )}
           </div>
-
         </div>
       </div>
     </div>

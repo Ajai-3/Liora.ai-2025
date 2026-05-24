@@ -15,19 +15,16 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Mock auth — replace with real API call
     setUser({ name: form.name || "User", email: form.email });
     navigate("/");
   };
 
   return (
     <div className="min-h-screen relative flex items-center justify-center px-4">
-      {/* Background gradient */}
       <div
         className="absolute top-0 left-0 right-0 h-full bg-gradient-to-r from-blue-900 via-purple-700 to-red-700 z-0"
         style={{ maskImage: "linear-gradient(to bottom, black 40%, transparent 100%)" }}
       >
-        {/* Left dot pattern */}
         <div
           className="absolute top-0 left-0 h-full w-[30%]"
           style={{
@@ -36,7 +33,6 @@ const Login = () => {
             maskImage: "linear-gradient(to right, white 0%, transparent 100%)",
           }}
         />
-        {/* Right dot pattern */}
         <div
           className="absolute top-0 right-0 h-full w-[30%]"
           style={{
@@ -47,12 +43,9 @@ const Login = () => {
         />
       </div>
 
-      {/* Fade to black */}
       <div className="absolute top-[40%] left-0 right-0 bottom-0 bg-gradient-to-b from-transparent to-black z-10" />
 
-      {/* Card */}
       <div className="relative z-20 w-full max-w-md">
-        {/* Logo */}
         <div
           onClick={() => navigate("/")}
           className="flex items-center gap-2 justify-center mb-8 cursor-pointer"

@@ -47,12 +47,10 @@ const BuyCredits = () => {
 
   return (
     <div className="min-h-screen relative px-4 sm:px-10 md:px-14 lg:px-28 pt-28 pb-20">
-      {/* Background gradient */}
       <div
         className="absolute top-0 left-0 right-0 h-[800px] bg-gradient-to-r from-blue-900 via-purple-500 to-red-600 z-0"
         style={{ maskImage: "linear-gradient(to bottom, black 50%, transparent 85%)" }}
       >
-        {/* Left dot pattern */}
         <div
           className="absolute top-0 left-0 h-full w-[30%]"
           style={{
@@ -61,7 +59,6 @@ const BuyCredits = () => {
             maskImage: "linear-gradient(to right, white 0%, transparent 100%)",
           }}
         />
-        {/* Right dot pattern */}
         <div
           className="absolute top-0 right-0 h-full w-[30%]"
           style={{
@@ -72,12 +69,9 @@ const BuyCredits = () => {
         />
       </div>
 
-      {/* Fade to black */}
       <div className="absolute top-[210px] left-0 right-0 bottom-0 bg-gradient-to-b from-transparent to-black z-10" />
 
-      {/* Content */}
       <div className="relative z-20 text-white">
-        {/* Heading */}
         <div className="text-center mb-12">
           <p className="py-1 px-3 mb-4 backdrop-blur-sm bg-white/10 rounded-full w-fit mx-auto text-sm">
             <FontAwesomeIcon icon={faCoins} className="mr-2 text-yellow-400" />
@@ -94,7 +88,6 @@ const BuyCredits = () => {
           </p>
         </div>
 
-        {/* Plans */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {plans.map((plan, i) => (
             <div
@@ -143,7 +136,6 @@ const BuyCredits = () => {
           ))}
         </div>
 
-        {/* Bottom note */}
         <p className="text-center text-gray-500 text-sm mt-10">
           Secure payment · Credits never expire · Cancel anytime
         </p>
